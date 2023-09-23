@@ -239,7 +239,7 @@ body {
 .hero-left-area .hero-sologan{
     font-size: 18px;
 	line-height: 20px;
-	font-weight: 500;
+	font-weight:400;
 	color: #0e1d3c;
 padding: 30px 0px;
 }
@@ -250,7 +250,7 @@ padding: 30px 0px;
         padding-top: 100px;
     }
     .mian-header-hero-section {
-        padding: 20px 0px 60px;
+        padding: 20px 0px 100px;
     }
 }
 
@@ -271,3 +271,261 @@ padding: 30px 0px;
         padding: 17px 0px;
     }
 }
+
+
+/*=========================================*/
+/*==========Start Service Section==========*/
+/*=========================================*/
+
+
+
+
+
+.main-service-section{
+    background-color: #7ebb48;
+    padding-bottom: 70px;
+}
+
+.service-item{
+    height: 270px;
+    width: 27%;
+    margin: 0px 3%;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: -80px;
+}
+.service-item .service-icon{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.service-item .service-name{
+    font-size: 20px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #282828;
+    padding-bottom: 20px;
+
+}
+.service-item .service-details{
+    font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #282828;
+}
+
+
+.discription-area{
+    text-align: center;
+}
+.discription-area .discription-text{
+    font-size: 28px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #fff;
+    padding: 40px 0px 30px;
+}
+.discription-area .discover-button{
+    font-size: 17px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #011d44;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .service-item {
+        height: 290px;
+        margin-top: -90px;
+    }
+}
+@media only screen and (max-width:991px) and (min-width:768px) {
+    
+    .service-item {
+        
+        width: 31%;
+        margin: 0px 1%;
+      
+        margin-top: -46px;
+    }
+    .service-item .service-name {
+        font-size: 16px;
+      
+        padding-bottom: 20px;
+    }
+    .service-item .service-details {
+        font-size: 14px;
+       
+    }
+    .service-item .service-icon {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media all and (max-width:767px) {
+    .service-item {
+        
+        width: 100%;
+        margin: 0px 0px 35px;
+      
+        margin-top: 0px;
+    }
+    .main-service-section {
+
+        padding: 70px 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width:380px){
+    .discription-area .discription-text {
+        font-size: 23px;
+     
+        padding: 20px 0px 20px;
+    }
+    .discription-area .discover-button {
+        font-size: 15px;
+       
+        padding: 10px 15px;
+      
+    }
+}
+
+
+
+
+
+
+
+/*=========================================*/
+/*==========Start About us Section==========*/
+/*=========================================*/
+
+.main-about-us-section{
+    padding: 70px 0px;
+}
+.about-us-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.about-us-left{
+    flex-basis: 50%;
+}
+.about-text{}
+.about-text .about-us-heading{
+    font-size: 30px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #0e1d3c;
+    padding-bottom: 20px;
+}
+.about-text .about-us-details{
+    font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #181818;
+}
+.about-text .about-us-link {
+	background: #83bb4f;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 265px;
+	border-radius: 10px;
+	margin-top: 35px;
+}
+.about-text .about-us-link span{
+    font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+}
+.about-text .about-us-link img{
+    height: 15px;
+    width: 25px;
+    margin-left: 10px;
+}
+
+
+.about-us-right {
+    flex-basis: 50%;
+    padding-left: 3%;
+}
+.about-image .a-image{
+    height: auto;
+    width: 100%;
+}
+.mb-none{
+    
+}
+.pc-none{
+    display: none;
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+    .about-text .about-us-details {
+        font-size: 14px;
+      
+    }
+
+}
+
+
+@media all and (max-width:767px) {
+    .about-us-item{
+flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    .about-us-left{
+        flex-basis: 100%;
+
+    }
+    .about-us-right {
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+    .mb-none{
+    display: none;
+    }
+    .pc-none{
+        display: block;
+    }
+    .margin-bottom{
+        margin-bottom: 50px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -37,11 +37,7 @@ h6 {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000000;
-}
-
-.container {
-    background-color: #ffffff;
+ 
 }
 
 /*=========================================*/
@@ -68,7 +64,10 @@ body {
 }
 
 .maniMenuArea {
-    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
 }
 
 .menuArea {
@@ -85,12 +84,18 @@ body {
     color: #fff;
     font-weight: 400;
     transition: 0.5s;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #82bc48;
+    margin: 0px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
 }
 
 
 .menuArea .menuList .menuLink:hover {
-    color: #33FFFF;
-    text-decoration: underline;
+    color: #000;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .maniMenuArea {}
@@ -98,13 +103,10 @@ body {
 .maniMenuArea .logoLink {}
 
 .maniMenuArea .logoLink .responsiveLogo {
-    height: 60px;
-    width: 70px;
+	height: auto;
+	width: 250px;
 }
 
-.maniMenuArea {
-    background-color: #000000;
-}
 
 .maniMenuArea .menu {
     clear: both;
@@ -174,7 +176,17 @@ body {
 .maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-
+@media all and (max-width:1300px) {
+    .menuArea .menuList .menuLink {
+      
+        padding:14px 10px;
+      
+    }
+    .maniMenuArea .logoLink .responsiveLogo {
+        height: auto;
+        width: 200px;
+    }
+}
 @media (min-width: 992px) {
     .maniMenuArea .menu-icon {
         display: none;
@@ -188,7 +200,11 @@ body {
         align-items: center;
         flex-direction: column;
     }
-
+    .maniMenuArea {
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+    }
     .menuArea {
         display: none;
     }
@@ -197,9 +213,61 @@ body {
         display: flex;
         justify-content: center !important;
         align-items: center !important;
+        margin-top: 40px;
     }
-
     .menuArea .menuList {
         margin: 8px 0px;
+    }
+}
+
+/*=========================================*/
+/*==========Start Hero Section==========*/
+/*=========================================*/
+
+.mian-header-hero-section {
+	background: url(../images/hero-bg.png)no-repeat scroll 0 0 / 100% 100%;
+	padding: 20px 0px 110px;
+}
+.hero-left-area{}
+.hero-left-area .hero-text {
+	font-size: 51px;
+	line-height: 49px;
+	font-weight: 500;
+	color: #000;
+	padding-top: 100px;
+}
+.hero-left-area .hero-sologan{
+    font-size: 18px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #0e1d3c;
+padding: 30px 0px;
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .hero-left-area .hero-text {
+        font-size: 43px;
+        padding-top: 100px;
+    }
+    .mian-header-hero-section {
+        padding: 20px 0px 60px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .hero-left-area .hero-text {
+        font-size: 36px;
+        line-height: 39px;
+     
+        padding-top: 40px;
+    }
+    .mian-header-hero-section {
+     
+        padding: 20px 0px 50px;
+    }
+    .hero-left-area .hero-sologan {
+        font-size: 15px;
+     
+        padding: 17px 0px;
     }
 }

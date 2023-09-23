@@ -1,0 +1,205 @@
+/*============
+font-family: 'Poppins', sans-serif;
+=============*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+.container {
+    background-color: #ffffff;
+}
+
+/*=========================================*/
+/*==========Start Header Section==========*/
+/*=========================================*/
+.mainHeaderArea {}
+
+.logoArea {}
+
+.logoArea .logoLink {
+    display: inline-block;
+}
+
+.logoArea .logoLink .logoImage {
+    height: auto;
+    width: 100%;
+}
+
+.headerBanar {}
+
+.headerBanar .banarImage {
+    width: 100%;
+    height: auto;
+}
+
+.maniMenuArea {
+    background-color: #000000;
+}
+
+.menuArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuArea .menuList {}
+
+.menuArea .menuList .menuLink {
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+
+.menuArea .menuList .menuLink:hover {
+    color: #33FFFF;
+    text-decoration: underline;
+}
+
+.maniMenuArea {}
+
+.maniMenuArea .logoLink {}
+
+.maniMenuArea .logoLink .responsiveLogo {
+    height: 60px;
+    width: 70px;
+}
+
+.maniMenuArea {
+    background-color: #000000;
+}
+
+.maniMenuArea .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.maniMenuArea .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 30px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.maniMenuArea .menu-icon .navicon {
+    background: #33FFFF;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 25px;
+}
+
+.maniMenuArea .menu-icon .navicon:before,
+.maniMenuArea .menu-icon .navicon:after {
+    background: #33FFFF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.maniMenuArea .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.maniMenuArea .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+.maniMenuArea .menu-btn {
+    display: none;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu {
+    max-height: 270px;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 992px) {
+    .maniMenuArea .menu-icon {
+        display: none;
+    }
+}
+
+@media all and (max-width:991px) {
+    .menuArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .menuArea {
+        display: none;
+    }
+
+    .maniMenuArea .menu-btn:checked ~ .menuArea {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .menuArea .menuList {
+        margin: 8px 0px;
+    }
+}

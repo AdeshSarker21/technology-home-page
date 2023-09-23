@@ -525,7 +525,111 @@ flex-wrap: wrap;
 
 
 
+/*=========================================*/
+/*==========Start Why CCS Section==========*/
+/*=========================================*/
 
 
+
+.why-ccs-platform{
+    padding-bottom: 120px;
+}
+.heading-area{
+    text-align: center;
+    padding-bottom: 120px;
+}
+.heading-area .heading-text{
+    font-size: 28px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #0e1d3c;
+  
+}
+
+
+.ccs-item {
+	background: #fff;
+	box-shadow: 0px 1px 10px 10px #ecf1ff;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 35px;
+}
+.ccs-item .css-item-text{
+    font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #282828;
+    padding: 15px;
+}
+
+
+
+@media all and (max-width:340px) {
+    .heading-area .heading-text{
+        font-size: 23px;
+     
+    
+    }
+    
+}
+
+
+
+/*=========================================*/
+/*==========Start Footer Section==========*/
+/*=========================================*/
+.main-footer-area{
+    background: url(../images/footer-bg.png)no-repeat scroll 0 0 / 100% 100%;
+    padding: 40px 0px;
+}
+.footer-item{
+    padding: 30px 0px;
+}
+.footer-item .footer-logo-link{}
+.footer-item .footer-logo-link .footer-logo{
+    height: 55px;
+    width: 80%;
+}
+
+.footer-item .footer-item-heading{
+    font-size: 20px;
+	line-height: 23px;
+	font-weight: 500;
+	color: #fff;
+    padding: 15px;
+}
+
+.footer-item ul{}
+.footer-item ul li{}
+.footer-item ul li .item-link{
+    font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #fff;
+    padding: 10px;
+}
+
+
+
+.copyright{
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #212b49;
+}
+.copyright .copyright-text{
+    font-size: 12px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #fff;
+ 
+}
+
+@media all and (max-width:767px) {
+    .main-footer-area {
+        background: #0e1d3c !important;
+        padding: 40px 0px;
+        text-align: center;
+    }
+}
 
 

@@ -1,3 +1,9 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 /*============
 font-family: 'Poppins', sans-serif;
 =============*/
@@ -63,14 +69,26 @@ body {
 }
 
 .maniMenuArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .menuArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -81,17 +99,29 @@ body {
     font-size: 16px;
     color: #fff;
     font-weight: 400;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     padding: 14px;
     border-radius: 10px;
     background-color: #82bc48;
     margin: 0px 15px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.nav-show {
+    display: none;
+}
+
+.nav-hide {
+    display: block;
 }
 
 .menuArea .menuList .menuLink:hover {
     color: #000;
     background-color: transparent;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -107,6 +137,8 @@ body {
 .maniMenuArea .menu {
     clear: both;
     max-height: 0;
+    -webkit-transition: max-height .2s ease-out;
+    -o-transition: max-height .2s ease-out;
     transition: max-height .2s ease-out;
 }
 
@@ -114,27 +146,35 @@ body {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 30px 20px;
+    padding: 17px 20px;
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 .maniMenuArea .menu-icon .navicon {
-    background: #33FFFF;
+    background: #97C767;
     display: block;
     height: 3px;
     position: relative;
+    -webkit-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
     transition: background .2s ease-out;
     width: 25px;
+    z-index: 99
 }
 
 .maniMenuArea .menu-icon .navicon:before,
 .maniMenuArea .menu-icon .navicon:after {
-    background: #33FFFF;
+    background: #97C767;
     content: '';
     display: block;
     height: 100%;
     position: absolute;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
     width: 100%;
 }
@@ -156,23 +196,19 @@ body {
     max-height: 270px;
 }
 
-.maniMenuArea .menu-btn:checked ~ .menu-icon .navicon {
+/* .maniMenuArea .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
-
 .maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
-
 .maniMenuArea .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
-
 .maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .maniMenuArea .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
-}
-
+} */
 @media all and (max-width:1300px) {
     .menuArea .menuList .menuLink {
         padding: 14px 10px;
@@ -192,15 +228,28 @@ body {
 
 @media all and (max-width:991px) {
     .menuArea {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
     .maniMenuArea {
         display: unset;
+        -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
         justify-content: unset;
+        -webkit-box-align: unset;
+        -ms-flex-align: unset;
         align-items: unset;
     }
 
@@ -209,14 +258,49 @@ body {
     }
 
     .maniMenuArea .menu-btn:checked ~ .menuArea {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
         justify-content: center !important;
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
         align-items: center !important;
         margin-top: 40px;
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -41px;
+        padding: 70px 0px 20px;
     }
 
     .menuArea .menuList {
-        margin: 8px 0px;
+        margin: 0px 0px;
+    }
+
+    .maniMenuArea .logoLink {
+        z-index: 9;
+        position: relative;
+    }
+
+    .menuArea .menuList .menuLink {
+        font-size: 19px;
+        color: #5C6373;
+        font-weight: 500;
+        background-color: transparent;
+        margin: 0px 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .nav-show {
+        display: block;
+    }
+
+    .nav-hide {
+        display: none;
     }
 }
 
@@ -225,7 +309,7 @@ body {
 /*=========================================*/
 .mian-header-hero-section {
     background: url(../images/hero-bg.png)no-repeat scroll 0 0 / 100% 100%;
-    padding: 20px 0px 110px;
+    padding: 20px 0px 180px;
 }
 
 .hero-left-area {}
@@ -244,6 +328,90 @@ body {
     font-weight: 400;
     color: #0e1d3c;
     padding: 30px 0px;
+}
+
+@media only screen and (max-width:7000px) and (min-width: 1501px) {
+    .mian-header-hero-section {
+        padding: 20px 0px 380px;
+    }
+
+    .service-item {
+        height: 310px;
+        width: 27%;
+        margin: 0px 3%;
+        background: #fff;
+        -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: -160px;
+    }
+
+    .service-item .service-icon {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .about-text .about-us-details {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #181818;
+    }
+
+    .about-text .about-us-heading {
+        font-size: 35px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #0e1d3c;
+        padding-bottom: 40px;
+    }
+
+    .about-us-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 160px;
+    }
+
+    .heading-area .heading-text {
+        font-size: 40px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #0e1d3c;
+    }
+
+    .ccs-item .css-item-text {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #282828;
+        padding: 22px;
+    }
+
+    .service-item .service-details {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #282828;
+    }
+
+    .service-item .service-name {
+        font-size: 23px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #282828;
+        padding-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
@@ -265,7 +433,7 @@ body {
     }
 
     .mian-header-hero-section {
-        padding: 20px 0px 50px;
+        padding: 20px 0px 110px;
     }
 
     .hero-left-area .hero-sologan {
@@ -274,11 +442,48 @@ body {
     }
 }
 
+@media all and (max-width:512px) {
+    .hero-left-area .hero-sologan {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width:480px) {
+    .hero-left-area .hero-text {
+        font-size: 30px;
+        line-height: 34px;
+        padding-top: 20px;
+    }
+
+    .mian-header-hero-section {
+        padding: 20px 0px 75px;
+    }
+}
+
+@media all and (max-width:357px) {
+    .hero-left-area .hero-text {
+        font-size: 27px;
+        line-height: 34px;
+        padding-top: 20px;
+    }
+
+    .mian-header-hero-section {
+        padding: 20px 0px 70px;
+    }
+
+    .hero-left-area .hero-sologan {
+        font-size: 14px;
+        padding: 8px 0px;
+    }
+}
+
 /*=========================================*/
 /*==========Start Service Section==========*/
 /*=========================================*/
 .main-service-section {
-    background-color: #7ebb48;
+    background-image: -webkit-gradient(linear, left top, right top, from(#7EBB48), color-stop(#80BE4A), color-stop(#85C751), color-stop(#89CC55), color-stop(#8ED55B), color-stop(#92DD61), color-stop(#96E365), color-stop(#98E768), color-stop(#9AE96A), color-stop(#9AE96A), to(#9AE96A));
+    background-image: -o-linear-gradient(left, #7EBB48, #80BE4A, #85C751, #89CC55, #8ED55B, #92DD61, #96E365, #98E768, #9AE96A, #9AE96A, #9AE96A);
+    background-image: linear-gradient(to right, #7EBB48, #80BE4A, #85C751, #89CC55, #8ED55B, #92DD61, #96E365, #98E768, #9AE96A, #9AE96A, #9AE96A);
     padding-bottom: 70px;
 }
 
@@ -287,6 +492,7 @@ body {
     width: 27%;
     margin: 0px 3%;
     background: #fff;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
     padding: 20px;
@@ -336,6 +542,8 @@ body {
     padding: 10px 15px;
     background: #fff;
     border-radius: 10px;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
 }
 
@@ -379,11 +587,35 @@ body {
     .service-item {
         width: 100%;
         margin: 0px 0px 35px;
-        margin-top: 0px;
+        margin-top: -130px;
+        margin-bottom: 190px;
     }
 
     .main-service-section {
         padding: 70px 0px;
+    }
+
+    .res-margin-top {
+        text-align: center;
+        margin-top: -140px;
+    }
+}
+
+@media all and (max-width:576px) {
+    .main-service-section {
+        padding: 70px 30px;
+    }
+
+    .discription-area .discription-text {
+        font-size: 28px;
+        line-height: 32px;
+        padding: 40px 0px 21px;
+    }
+}
+
+@media all and (max-width:440px) {
+    .discription-area .discription-text {
+        font-size: 23px;
     }
 }
 
@@ -399,6 +631,18 @@ body {
     }
 }
 
+@media all and (max-width:376px) {
+    .discription-area .discription-text {
+        font-size: 21px;
+    }
+}
+
+@media all and (max-width:330px) {
+    .service-item {
+        height: 290px;
+    }
+}
+
 /*=========================================*/
 /*==========Start About us Section==========*/
 /*=========================================*/
@@ -407,13 +651,20 @@ body {
 }
 
 .about-us-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 70px;
 }
 
 .about-us-left {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
 }
 
@@ -436,17 +687,23 @@ body {
 
 .about-text .about-us-link {
     background: #83bb4f;
-    padding: 10px 15px;
+    padding: 17px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    width: 265px;
+    width: 315px;
     border-radius: 10px;
     margin-top: 35px;
 }
 
 .about-text .about-us-link span {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     font-weight: 400;
     color: #fff;
@@ -461,13 +718,14 @@ body {
 }
 
 .about-us-right {
+    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
     padding-left: 3%;
 }
 
 .about-image .a-image {
     height: auto;
-    width: 100%;
+    width: 80%;
 }
 
 .mb-none {}
@@ -484,15 +742,18 @@ body {
 
 @media all and (max-width:767px) {
     .about-us-item {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         margin-bottom: 50px;
     }
 
     .about-us-left {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
 
     .about-us-right {
+        -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
         padding-left: 0;
     }
@@ -507,6 +768,27 @@ body {
 
     .margin-bottom {
         margin-bottom: 50px;
+    }
+
+    .about-us-item {
+        text-align: center;
+    }
+
+    .about-text .about-us-link {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+
+@media all and (max-width:576px) {
+    .about-image .a-image {
+        height: auto;
+        width: 95%;
+    }
+
+    .about-us-item {
+        text-align: center;
+        padding: 0px 5%;
     }
 }
 
@@ -531,6 +813,7 @@ body {
 
 .ccs-item {
     background: #fff;
+    -webkit-box-shadow: 0px 1px 10px 10px #ecf1ff;
     box-shadow: 0px 1px 10px 10px #ecf1ff;
     padding: 20px;
     border-radius: 10px;
@@ -543,6 +826,19 @@ body {
     font-weight: 400;
     color: #282828;
     padding: 15px;
+    text-align: center;
+}
+
+@media all and (max-width:576px) {
+    .why-ccs-platform {
+        padding-bottom: 120px;
+        padding: 0px 5% 120px;
+    }
+
+    .heading-area {
+        text-align: center;
+        padding-bottom: 60px;
+    }
 }
 
 @media all and (max-width:340px) {
@@ -566,8 +862,8 @@ body {
 .footer-item .footer-logo-link {}
 
 .footer-item .footer-logo-link .footer-logo {
-    height: 55px;
-    width: 80%;
+    height: 50px;
+    width: 100%;
 }
 
 .footer-item .footer-item-heading {
